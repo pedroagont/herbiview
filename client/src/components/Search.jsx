@@ -21,6 +21,7 @@ export default function SearchBar() {
     getPlantsArray().then((res) => {
       setPlants(res.data);
     })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const [inputValue, setInputValue] = useState("");

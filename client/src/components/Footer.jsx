@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvira, faInstagram, faFacebookSquare, faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEnvira, faInstagram, faFacebookSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { Typography } from '@mui/material';
 
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "../styles/Footer.scss";
 

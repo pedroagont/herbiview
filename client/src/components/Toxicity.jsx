@@ -7,6 +7,12 @@ import { faHorse, faCat, faDog } from "@fortawesome/free-solid-svg-icons"
 
 export default function Toxicity({ toxicities }) {
 
+  function getObjectIcon(obj){
+    if (obj.animal === "horse" && obj.toxic === true) return faHorse
+    else if (obj.animal === "cat" && obj.toxic === true ) return faCat
+    else if (obj.animal === "dog" && obj.toxic === true) return faDog
+  }
+
   if (toxicities.filter(e => e.toxic === true).length > 0) {
     return (
       <Container>
@@ -28,21 +34,13 @@ export default function Toxicity({ toxicities }) {
             <Typography component={'span'} variant="h1" sx={{ textAlign: "center" }}>
 
 
-              {toxicities.map((obj, index) => {
+              {toxicities.map((obj, index) => (
 
-                if (obj.animal === "horse" && obj.toxic === true) return (
-                  <FontAwesomeIcon icon={faHorse} key={index} />
-                  )
+      <FontAwesomeIcon icon={getObjectIcon(obj)} key={index} />
 
-                else if (obj.animal === "cat" && obj.toxic === true ) return (
-                  <FontAwesomeIcon icon={faCat} key={index} />
 
-                  )
-
-                else if (obj.animal === "dog" && obj.toxic === true) return (
-                  <FontAwesomeIcon icon={faDog} key={index} />
-                )
-              })}
+                
+              ))}
             </Typography>
           </Box>
 

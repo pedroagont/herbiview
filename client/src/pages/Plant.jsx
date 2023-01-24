@@ -35,6 +35,7 @@ export default function Plant() {
     .then((res) => {
       setPlant(res.data)
     })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [params.plantId])
 
 
